@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Leo Cai">
+    <meta name="description" content="Safe Route Planner - Home Page">
+    <meta name="keywords" content="Safe, Route, Planner, Walking">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Safe Route Planner</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html"><img src="img/icon.png" alt="logo">Safe Route Planner</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="project.html">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled disable" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="blank"></div>
+        <div id="project" class="d-flex">
+            <div class="row">
+                <div class="col col-sm-6" id="title">
+                    <div class="container" id="project-content">
+                        <div id="project-content-text">
+                            <h1>
+                                Smart Route Planner
+                            </h1>
+                            <h3>Crime Map</h3>
+                            <p>University District, Seattle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-sm-6" id="map-div">
+                    <div id="map" aria-label="Map"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let marks = [
+                {
+                    lat: 47.663740,
+                    lng: -122.306598
+                },
+                {
+                    lat: 47.665591,
+                    lng: -122.312166
+                },
+                {
+                    lat: 47.659125,
+                    lng: -122.314325
+                },
+                {
+                    lat: 47.664539,
+                    lng: -122.308244
+                },
+                {
+                    lat: 47.665792,
+                    lng: -122.302782
+                },
+                {
+                    lat: 47.659791,
+                    lng: -122.315353
+                },
+                {
+                    lat: 47.661582,
+                    lng: -122.313093
+                },
+                {
+                    lat: 47.662787,
+                    lng: -122.312106
+                }
+            ];
+
+            function initMap() {
+                let center = marks[0];
+                let map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 15, center: center });
+                marks.forEach(function (x) {
+                    new google.maps.Marker({ position: x, map: map });
+                });
+            }
+        </script>
+        <div class="next">
+            <div class="container">
+                <div class="next-content">
+                    <img class="next-img" src="img/rocket.svg" alt="launch">
+                    <h2 class="pb-3">Stage One</h2>
+                    <p>In stage one, I build a crime map as a prototype using a set of sample geolocation data. The map
+                        indicates the criminal incidents happened around the University District, Seattle. Ideally, it
+                        would
+                        connect to the database of Seattle Police Department and gain instant updates. Users can use
+                        this map
+                        to get some sense of their surrounding environment and optimize their routes. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="next">
+            <div class="container">
+                <div class="next-content">
+                    <img class="next-img" src="img/next.svg" alt="next">
+                    <h2 class="pb-3">Next Step</h2>
+                    <p>My next step is to link the Safe Route Planner web application to a real crime database and
+                        build a responsive crime map. Besides that, I would like to analyze the crime data by its data
+                        attributes and generate a safety factor for each area in Seattle. Finally, basic on the safety
+                        factor of areas and some other repsonsive variables, the web app can provide commendation for
+                        route planning. </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled disable" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled disable" href="#">Contact Us</a>
+            </li>
+        </ul>
+        <div class="footer-copyright text-center">
+            <div class="copyright">© 2018 Copyright: Leo Cai</div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-GkAij8AVSrod8iyXcLS_mM6zPIgp8nU&callback=initMap">
+    </script>
+</body>
+
+</html>
