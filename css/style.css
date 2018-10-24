@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit|Poppins');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main, body {
+    color:#e6e6e6;
+}
+
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    display: block;
+    z-index: 1;
+    width: 100%;
+}
+
+nav {
+    opacity: 0.6; 
+}
+
+header nav img {
+    height: 45px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+main {
+    display: block;
+}
+
+.main-agency {
+    background: url(../img/bg_2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.main-full {
+    text-align: center;
+    height: 100vh;
+}
+
+#front {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.heading {
+    position: relative;
+    height:100vh;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.heading .heading-answer {
+    animation-duration: 10s;
+    animation-name: showAnswer;
+}
+
+.heading-body h1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.heading-body img {
+    height: 100px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.heading-body i {
+    position: absolute;
+    font-size: 30px;
+    bottom: 20px;
+    color:darkgray;
+    animation-duration: 1s;
+    animation-name: hoverEffect;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.heading-body i:hover {
+    color: white;
+}
+
+.features {
+    background-color: #f2f2f2;
+}
+
+.features .container {
+    padding-top: 50px;
+    color: black;
+}
+
+.content .features .card img {
+    height: 100px;
+}
+
+.card {
+    border: none;
+    background-color: #f2f2f2;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.intro {
+    background-color: white;
+    color: black;
+}
+
+.intro .container{
+    padding: 50px;
+}
+
+footer {
+    text-align: center;
+    position: relative;
+    padding-top: 10px;
+    opacity: 0.6; 
+}
+
+footer ul {
+    padding-bottom: 5px;
+}
+
+footer li {
+    display: inline;
+    padding-right: 45px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #cccccc;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+@keyframes showAnswer {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes hoverEffect {
+    from {
+        bottom: 20px;
+    }
+  
+    to {
+        bottom: 5px;
+    }
+}
+
+#map {
+    height: 100vw;
+    width: 100vw;
+}
+
+#blank {
+    height: 71px;
+    width: 100%;
+}
+
+#project-content {
+    color:black;
+    text-align: center;
+    height:50vw;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+#title, #map-div {
+    padding-left: 0;
+}
+
+#title {
+    text-align: center;
+}
+
+.next {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 50px;
+}
+
+.next-img {
+    height: 100px;
+    margin-bottom: 3px;
+}
+
+.next:last-child {
+    background-color: white;
+
+}
+
+.next-content {
+    color: black;
+}
+
+@media (min-width: 576px) {
+    #map {
+        height: 50vw;
+        width: 100vw;
+    }
+}
