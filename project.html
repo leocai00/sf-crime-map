@@ -103,7 +103,7 @@
                 let map = new google.maps.Map(
                     document.getElementById('map'), { zoom: 15, center: center});
                 marks.forEach(function (x) {
-                    let marker = new google.maps.Marker({position: x, map: map});
+                    let marker = new google.maps.Marker({position: x, map: map, title: 'Hello World!'});
                 });
             }
         </script>
