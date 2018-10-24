@@ -212,6 +212,11 @@ footer a:hover {
 
 }
 
+#row-size {
+    width: 100%;
+    margin: 0;
+}
+
 .next-content {
     color: black;
 }
@@ -219,6 +224,6 @@ footer a:hover {
 @media (min-width: 576px) {
     #map {
         height: 50vw;
-        width: 50vw;
+        width: 100%;
     }
 }
