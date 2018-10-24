@@ -103,7 +103,8 @@
                 let map = new google.maps.Map(
                     document.getElementById('map'), { zoom: 15, center: center});
                 marks.forEach(function (x) {
-                    new google.maps.Marker({position: x, map: map, title:"point"});
+                    let marker = new google.maps.Marker({position: x, map: map, title:"point"});
+                    marker.setAttribute("aria-hidden", "true");
                 });
             }
         </script>
