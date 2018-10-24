@@ -176,7 +176,6 @@ footer a:hover {
 
 #blank {
     height: 71px;
-    width: 100%;
 }
 
 #project-content {
@@ -190,6 +189,7 @@ footer a:hover {
 
 #title, #map-div {
     padding-left: 0;
+    padding-right: 0;
 }
 
 #title {
@@ -219,6 +219,6 @@ footer a:hover {
 @media (min-width: 576px) {
     #map {
         height: 50vw;
-        width: 100vw;
+        width: 50vw;
     }
 }
