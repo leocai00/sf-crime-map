@@ -99,17 +99,11 @@
             ];
 
             function initMap() {
-                var myLatLng = { lat: -25.363, lng: 131.044 };
-
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 4,
-                    center: myLatLng
-                });
-
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    title: 'Hello World!'
+                let center = marks[0];
+                let map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 15, center: center});
+                marks.forEach(function (x) {
+                    let marker = new google.maps.Marker({position: x, map: map, title:"point"});
                 });
             }
         </script>
