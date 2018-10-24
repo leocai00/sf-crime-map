@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="col col-sm-6" id="map-div">
-                    <div id="map" aria-label="Map"></div>
+                    <div id="map" aria-label="Map" role="application"></div>
                 </div>
             </div>
         </div>
@@ -101,9 +101,9 @@
             function initMap() {
                 let center = marks[0];
                 let map = new google.maps.Map(
-                    document.getElementById('map'), { zoom: 15, center: center });
+                    document.getElementById('map'), { zoom: 15, center: center});
                 marks.forEach(function (x) {
-                    new google.maps.Marker({ position: x, map: map });
+                    new google.maps.Marker({position: x, map: map});
                 });
             }
         </script>
