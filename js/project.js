@@ -47,7 +47,8 @@ function renderMarker(data) {
             let latLng = new google.maps.LatLng(y, x);
             let marker = new google.maps.Marker({
                 position: latLng,
-                map: map
+                map: map,
+                title: 'marker'
             });
 
             let contentString = '<div class="markers">' +
