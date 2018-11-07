@@ -8,8 +8,12 @@
     <meta name="author" content="Leo Cai">
     <meta name="description" content="Safe Route Planner - Home Page">
     <meta name="keywords" content="Safe, Route, Planner, Walking">
-    <link rel="icon" type="image/png" href="img/icon.svg">
+    <link rel="icon" type="image/png" href="img/icon2.png">
     <title>Safe Route Planner</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -20,7 +24,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html"><img src="img/icon.png" alt="logo">Safe Route Planner</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar"
                 aria-label="Toggle navigation">
@@ -36,13 +40,13 @@
                         <a class="nav-link" href="project.html">Project</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="#feature-anchor">Features</a>
+                        <a class="nav-link" href="project_detail.html">Prototype</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="#introduction">Introduction</a>
+                        <a class="nav-link" href="index.html#feature-anchor">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled disable" href="#">Contact Us</a>
+                        <a class="nav-link" href="index.html#introduction">Introduction</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +61,7 @@
                         <h1><img src="img/icon.png" alt="logo">Safe Route Planner</h1>
                         <h4>Helps You Arrive Home Safely</h4>
                     </div>
-                    <a href="#feature-anchor"><i class="fas fa-angle-double-down"></i></a>
+                    <a href="#feature-anchor" aria-label="scroll down"><i class="fas fa-angle-double-down"></i></a>
                 </div>
             </div>
         </div>
@@ -87,7 +91,7 @@
                                 <img class="pb-3" src="img/ai.svg" alt="artificial intelligence">
                                 <div class="card-content">
                                     <h2>AI</h2>
-                                    <p>Apply artificial intelligence to suggest the safest route to your 
+                                    <p>Apply artificial intelligence to suggest the safest route to your
                                         destination</p>
                                 </div>
 
@@ -101,7 +105,7 @@
                                 <img class="pb-2" src="img/alert.svg" alt="Emergency Help">
                                 <div class="card-content">
                                     <h2>Emergency Help</h2>
-                                    <p>Immediately notify your local police of your location and 
+                                    <p>Immediately notify your local police of your location and
                                         emergency when you need</p>
                                 </div>
                             </div>
@@ -136,7 +140,8 @@
                         How shall we avoid criminal incidents in a city and how to ensure the safety of people?</p>
 
                     <p> Safe Router Planner can help people plan safe walking routes. The app would evaluate the safety
-                        of all possible routes and recommend the <em>safest</em> one for the selected range of time. Most
+                        of all possible routes and recommend the <em>safest</em> one for the selected range of time.
+                        Most
                         walking routes planning apps like only evaluate time and distance. The app fills in the blank
                         area and prevents people from crime.</p>
                 </div>

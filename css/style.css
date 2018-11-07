@@ -169,14 +169,13 @@ footer a:hover {
     }
 }
 
-#map {
+.map-block {
     height: 100vw;
     width: 100vw;
 }
 
 #blank {
     height: 71px;
-    width: 100%;
 }
 
 #project-content {
@@ -186,11 +185,11 @@ footer a:hover {
     width: 100vw;
     display: table-cell;
     vertical-align: middle;
-
 }
 
 #title, #map-div {
     padding-left: 0;
+    padding-right: 0;
 }
 
 #title {
@@ -210,7 +209,11 @@ footer a:hover {
 
 .next:last-child {
     background-color: white;
+}
 
+#row-size {
+    width: 100%;
+    margin: 0;
 }
 
 .next-content {
@@ -218,8 +221,56 @@ footer a:hover {
 }
 
 @media (min-width: 576px) {
-    #map {
+    .map-block {
         height: 50vw;
-        width: 100vw;
+        width: 100%;
     }
+}
+
+.markers {
+    color: black;
+}
+
+.prototype {
+    /* Why height 100% can not work? */
+    /* height: 100%; */
+    height: calc(100vh - 71px - 79px);
+}
+
+#full-window {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#full-window-html {
+    height: 100%;
+}
+
+#main-header, #main-footer {
+  flex: none;
+}
+
+#main-map {
+    flex: auto;
+}
+
+#arrow {
+    position: absolute;
+    left: 10px;
+    top: calc(100vh / 2);
+}
+
+#arrow i {
+    font-size: 35px;
+}
+
+#arrow:hover {
+    color: gray;
+}
+
+#sheet {
+    height: 0px;
+    color: black;
 }

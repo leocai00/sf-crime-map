@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="full-window-html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Leo Cai">
-    <meta name="description" content="Safe Route Planner - Project Page">
+    <meta name="description" content="Safe Route Planner - Detail Page">
     <meta name="keywords" content="Safe, Route, Planner, Walking">
     <link rel="icon" type="image/png" href="img/icon2.png">
     <title>Safe Route Planner</title>
@@ -22,8 +22,8 @@
 
 </head>
 
-<body>
-    <header>
+<body id="full-window">
+    <header id="main-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html"><img src="img/icon.png" alt="logo">Safe Route Planner</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar"
@@ -36,10 +36,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="project.html">Project</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="project_detail.html">Prototype</a>
                     </li>
                     <li class="nav-item">
@@ -52,61 +52,31 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div id="blank"></div>
-        <div id="project">
-            <div class="row" id="row-size">
-                <div class="col col-sm-6" id="title">
-                    <div class="container" id="project-content">
-                        <div id="project-content-text">
-                            <h1>
-                                Smart Route Planner
-                            </h1>
-                            <h3>Crime Map</h3>
-                            <p>San Francisco</p>
-                            <div>
-                                <form action="project_detail.html">
-                                    <button type="submit" class="btn btn-primary">Open</button>
-                                </form>
-                            </div>
-                        </div>
+    <main id="main-map">
+        <div>
+            <div id="blank"></div>
+            <div id="sheet" class="container">
+                <form>
+                    <div class="form-group mr-3">
+                        <label for="count" class="mr-2">Total Amount of Incidents Queried</label>
+                        <input type="number" class="form-control" id="count" aria-label="Amount of Incidents">
                     </div>
-                </div>
-                <div class="col col-sm-6" id="map-div">
-                    <div class="map-block" id="map" aria-hidden="true" role="application"></div>
-                </div>
+                    <div class="form-group mr-3">
+                        <label for="category" class="mr-2">Category</label>
+                        <select class="form-control" aria-label="Category" id="category">
+                            <option selected>All</option>
+                        </select>
+                    </div>
+                    <button id="clear" type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                    <!-- extra form param -->
+                </form>
             </div>
-        </div>
-        <div class="next">
-            <div class="container">
-                <div class="next-content">
-                    <img class="next-img" src="img/rocket.svg" alt="launch">
-                    <h2 class="pb-3">Stage One</h2>
-                    <p>In stage one, I build a crime map as a prototype using a set of sample geolocation data. The map
-                        indicates the criminal incidents happened around the University District, Seattle. Ideally, it
-                        would
-                        connect to the database of Seattle Police Department and gain instant updates. Users can use
-                        this map
-                        to get some sense of their surrounding environment and optimize their routes. </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="next">
-            <div class="container">
-                <div class="next-content">
-                    <img class="next-img" src="img/next.svg" alt="next">
-                    <h2 class="pb-3">Next Step</h2>
-                    <p>My next step is to link the Safe Route Planner web application to a real crime database and
-                        build a responsive crime map. Besides that, I would like to analyze the crime data by its data
-                        attributes and generate a safety factor for each area in Seattle. Finally, basic on the safety
-                        factor of areas and some other repsonsive variables, the web app can provide commendation for
-                        route planning. </p>
-                </div>
-            </div>
+            <div class="prototype" id="map" aria-hidden="true" role="application"></div>
         </div>
     </main>
-    <footer class="bg-dark">
+    <footer class="bg-dark" id="main-footer">
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link" href="index.html">About</a>
@@ -122,7 +92,7 @@
             <div class="copyright">© 2018 Copyright: Leo Cai</div>
         </div>
     </footer>
-    <script src="js/showcase.js"></script>
+    <script src="js/project.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
